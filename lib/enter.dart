@@ -7,19 +7,24 @@ class enter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox(
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 231, 245, 217),
+      body: Center(
+          child: SizedBox(
         height: 700,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Image(
               image: AssetImage("images/logo.png"),
-              width: 270,
+              width: 300,
             ),
             Padding(
               padding: const EdgeInsets.all(40.0),
               child: ElevatedButton(
+                style: ButtonStyle(
+                  elevation: MaterialStateProperty.all(8),
+                ),
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -28,12 +33,17 @@ class enter extends StatelessWidget {
                   },
                   child: const Text(
                     "Accedi",
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(
+                      fontSize: 19,
+                      letterSpacing: 0.8,
+                      fontWeight: FontWeight.w500,
+                      
+                      ),
                   )),
             ),
           ],
         ),
-      ),
+      )),
     );
   }
 }
