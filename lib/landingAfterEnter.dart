@@ -1,4 +1,3 @@
-// ignore: file_names
 import 'package:enomis_iv_bank/bankBalance.dart';
 import 'package:enomis_iv_bank/transactionList.dart';
 import 'package:enomis_iv_bank/welcomeUser.dart';

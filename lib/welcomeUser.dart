@@ -11,7 +11,7 @@ class _welcomeUserState extends State<welcomeUser> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
+      height: 120,
       child: Container(
         // color: Colors.blue,
         decoration: BoxDecoration(
@@ -19,13 +19,13 @@ class _welcomeUserState extends State<welcomeUser> {
           color: const Color.fromARGB(0, 37, 15, 13),
           borderRadius: const BorderRadius.all(Radius.circular(20)),
         ),
-        margin: const EdgeInsets.only(bottom: 30),
+        margin: const EdgeInsets.fromLTRB(0, 40, 0, 10),
 
         child: const Column(
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 12.0),
+                padding: EdgeInsets.symmetric(vertical: 1.0, horizontal: 12.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.baseline,
