@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'alertdialog/maintenance.dart';
 import 'landingAfterEnter.dart';
 
 class enter extends StatelessWidget {
@@ -22,14 +23,17 @@ class enter extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(40.0),
               child: ElevatedButton(
-                style: ButtonStyle(
-                  elevation: MaterialStateProperty.all(8),
-                ),
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.all(8),
+                  ),
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const landingAfterEnter()));
+                    showDialog(
+                        context: context,
+                        builder: (context) => maintenance());
                   },
                   child: const Text(
                     "Accedi",
@@ -37,8 +41,7 @@ class enter extends StatelessWidget {
                       fontSize: 19,
                       letterSpacing: 0.8,
                       fontWeight: FontWeight.w500,
-                      
-                      ),
+                    ),
                   )),
             ),
           ],
